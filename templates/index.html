@@ -62,7 +62,7 @@
                 <h2>About Me</h2>
             </header>
             <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" alt="" /></a>
-            <p>I am currently a 4th year student at Mount Royal University enrolled in Computer Information Systems Program</p>
+            <p>I am currently a 4th year student at Mount Royal University </p>
         </div>
     </section>
 
@@ -82,8 +82,12 @@
                         </a>
                         <header>
                             <h3>Click Anywhere On The Image!<br>
-                            Made Using NumPy</h3>
+                            Made Using Python NumPy</h3>
                         </header>
+                        <div class="color-info-wrapper">
+                            <p id="color-info">R: 0, G: 0, B: 0</p>
+                            <div id="color-box"></div>
+                        </div>
                     </article>
                 </div>
                 <div class="col-6 col-12-mobile">
@@ -93,14 +97,20 @@
                             Your browser does not support the video tag.
                         </video>
                         <header>
-                            <h3>Python Turtle Space Invaders Game</h3>
+                            <h3>Space Invaders Game<br>Made Using Python Turtle</h3>
                         </header>
                     </article>
                 </div>
-            </div>
-            <div class="color-info-wrapper">
-                <p id="color-info">R: 0, G: 0, B: 0</p>
-                <div id="color-box"></div>
+                <div class="col-12">
+                    <article class="item">
+                        <iframe src="{{ url_for('static', filename='covid_animation.html') }}" width="100%" height="400px"></iframe>
+                        <header>
+                            <h3>Interactive COVID-19 Spread Map: Top 50 Most Affected Countries<br>
+                                Hover and Scroll over the map!<br>
+                            Made With Python Plotly</h3>
+                        </header>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
