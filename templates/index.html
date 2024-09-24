@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<div id="header">
+    <div class="top">
+        <!-- Logo -->
+        <div id="logo">
+            <span class="image avatar48"><img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" alt="" /></span>
+            <h1 id="title">Dan Nguyen</h1>
+            <p>Student</p>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                <li><a href="#hobbies" id="hobbies-link"><span class="icon solid fa-envelope">Hobbies</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="bottom">
+        <!-- Social Icons -->
+        <ul class="icons">
+            <li><a href="https://github.com/dannguyen27" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+            <li><a href="mailto:dnguy699@mtroyal.ca" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+            <li><a href="https://www.linkedin.com/in/dan-nguyen-a26926266/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+        </ul> 
+    </div>
+</div>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Intro -->
+    <section id="top" class="">
+        <div class="container">
+            <header>
+                <h2 class="alt">Hi! I'm <strong>Dan</strong></h2>
+            </header>
+            <footer>
+                <a href="#portfolio" class="button scrolly">Portfolio</a>
+            </footer>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="three">
+        <div class="container">
+            <header>
+                <h2>About Me</h2>
+            </header>
+            <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" alt="" /></a>
+            <p>I am currently a 4th year student at Mount Royal University enrolled in Computer Information Systems Program</p>
+        </div>
+    </section>
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="two">
+        <div class="container">
+            <header>
+                <h2>Portfolio</h2>
+            </header>
+            <p>Personal Projects hoping to capture your attention</p>
+            <div class="row">
+                <div class="col-6 col-12-mobile">
+                    <article class="item">
+                        <a class="image fit" id="portfolio-img-1">
+                            <img src="{{ url_for('static', filename='images/Osaka.jpg') }}" alt="Osaka Image" />
+                        </a>
+                        <header>
+                            <h3>Click Anywhere On The Image!<br>
+                            Made Using NumPy</h3>
+                        </header>
+                    </article>
+                </div>
+                <div class="col-6 col-12-mobile">
+                    <article class="item">
+                        <video width="100%" controls>
+                            <source src="{{ url_for('static', filename='videos/space_invaders.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <header>
+                            <h3>Python Turtle Space Invaders Game</h3>
+                        </header>
+                    </article>
+                </div>
+            </div>
+            <div class="color-info-wrapper">
+                <p id="color-info">R: 0, G: 0, B: 0</p>
+                <div id="color-box"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="four">
+        <div class="container">
+            <h2>Hobbies</h2>
+            <h3>Photography</h3>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ url_for('static', filename='images/DSC00766.jpg') }}" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01218.jpg') }}" class="d-block w-100" alt="Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01257.jpg') }}" class="d-block w-100" alt="Image 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01266.jpg') }}" class="d-block w-100" alt="Image 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01324.jpg') }}" class="d-block w-100" alt="Image 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01326.jpg') }}" class="d-block w-100" alt="Image 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01349.jpg') }}" class="d-block w-100" alt="Image 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/DSC01428~3.jpg') }}" class="d-block w-100" alt="Image 9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='images/Inari_Front.jpg') }}" class="d-block w-100" alt="Image 10">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const osakaImage = document.getElementById('portfolio-img-1');
+            
+            if (osakaImage) {
+                osakaImage.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    console.log('Image clicked'); // Log to console
+                });
+            } else {
+                console.error('Image element not found');
+            }
+        });
+    </script>
+            
+            
+</body>
+</html>
