@@ -14,7 +14,7 @@
     <div class="top">
         <!-- Logo -->
         <div id="logo">
-            <span class="image avatar48"><img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" alt="" /></span>
+            <span class="image avatar48"><img src="{{ url_for('static', filename='images/profile_image.jpg') }}" alt="" /></span>
             <h1 id="title">Dan Nguyen</h1>
             <p>Student</p>
         </div>
@@ -75,7 +75,8 @@
             </header>
             <p>Personal Projects hoping to capture your attention</p>
             <div class="row">
-                <div class="col-6 col-12-mobile">
+                <!-- Image Color Picker -->
+                <div class="col-4 col-12-mobile">
                     <article class="item">
                         <a class="image fit" id="portfolio-img-1">
                             <img src="{{ url_for('static', filename='images/Osaka.jpg') }}" alt="Osaka Image" />
@@ -90,7 +91,9 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-6 col-12-mobile">
+                
+                <!-- Space Invaders Video -->
+                <div class="col-4 col-12-mobile">
                     <article class="item">
                         <video width="100%" controls>
                             <source src="{{ url_for('static', filename='videos/space_invaders.mp4') }}" type="video/mp4">
@@ -101,19 +104,41 @@
                         </header>
                     </article>
                 </div>
+                
+
+                <!-- Threeoutputs -->
+                <div class="col-4 col-12-mobile">
+                    <article class="item">
+                        <a class="image fit" id="portfolio-img-1">
+                            <img src="{{ url_for('static', filename='images/threeoutputs_demo.png') }}" alt="threeoutputs_demo" />
+                        </a>
+                        <header>
+                            <h3>Providing a prompt will output a story, image and song all related<br>
+                            Made Using OpenAI, Unsplash and Spotify API</h3>
+                        </header>
+                        <a href="https://threeoutputs.dannguyen.site/" class="button" target="_blank">
+                            Give it a try!
+                        </a>
+                    </article>
+                </div>
+
+                
+                <!-- COVID-19 Spread Map Iframe -->
                 <div class="col-12">
                     <article class="item">
                         <iframe src="{{ url_for('static', filename='covid_animation.html') }}" width="100%" height="400px"></iframe>
                         <header>
                             <h3>Interactive COVID-19 Spread Map: Top 50 Most Affected Countries<br>
                                 Hover and Scroll over the map!<br>
-                            Made With Python Plotly</h3>
+                            Made With Python Plotly<br>
+                            Data From Johns Hopkins University</h3>
                         </header>
                     </article>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 
