@@ -3,7 +3,12 @@ import numpy as np
 from PIL import Image
 import os
 
+
+
+
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 
 # Base path for images
 IMAGE_FOLDER = 'static/images/'
