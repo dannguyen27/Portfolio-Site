@@ -57,14 +57,18 @@
 
     <!-- About Me -->
     <section id="about" class="three">
-        <div class="container">
-            <header>
-                <h2>About Me</h2>
-            </header>
-            <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/DSC00782.jpg') }}" alt="" /></a>
-            <p>I am currently a 4th year student at Mount Royal University </p>
+        <div class="container about-container">
+            <div class="about-image">
+                <a href="#" class="image featured">
+                    <img src="{{ url_for('static', filename='images/Dan_Temple.jpg') }}" alt="Dan Temple" />
+                </a>
+            </div>
+            <div class="about-text">
+                <p>I am currently a 4th year student at Mount Royal University. I am passionate about software development, data analysis, and AI, with the goal of leveraging these skills to solve real-world problems and advance my career in tech.</p>
+            </div>
         </div>
     </section>
+    
 
 
     <!-- Portfolio -->

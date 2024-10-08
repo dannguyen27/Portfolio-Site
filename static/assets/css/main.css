@@ -2676,6 +2676,28 @@ input, select, textarea {
 	.button:hover {
 		background: linear-gradient(135deg, rgba(255, 105, 180, 1), rgba(255, 182, 193, 1)); /* Full opacity on hover */
 	}
+
+	.about-container {
+		display: flex;
+		align-items: center; /* Align vertically centered */
+		justify-content: space-between; /* Optional: Add space between image and text */
+	}
+	
+	.about-image {
+		flex: 0 0 auto; /* Make the image container stay at its content width */
+		margin-right: 20px; /* Add some space between the image and text */
+	}
+	
+	.about-text {
+		flex: 1; /* Make the text container take up the remaining space */
+	}
+	
+	img[src*="Dan_Temple.jpg"] {
+		width: 500px; /* Control the width of the image */
+		height: auto; /* Keep the aspect ratio */
+		max-width: 100%; /* Ensure responsiveness */
+	}
+	
 	
 
 
