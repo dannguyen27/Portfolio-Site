@@ -116,3 +116,55 @@
 				});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+	const iframeContainers = document.querySelectorAll('.iframe-container');
+
+	iframeContainers.forEach(container => {
+		container.setAttribute('tabindex', '0');  // Make the div focusable
+		container.addEventListener('keydown', function(e) {
+			if (e.key === 'ArrowRight') {
+				container.scrollLeft += 20;  // Scroll right
+			} else if (e.key === 'ArrowLeft') {
+				container.scrollLeft -= 20;  // Scroll left
+			}
+		});
+	});
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	const iframeContainers = document.querySelectorAll('.iframe-container');
+
+	iframeContainers.forEach(container => {
+		let isDown = false;
+		let startX;
+		let scrollLeft;
+
+		container.addEventListener('mousedown', (e) => {
+			isDown = true;
+			container.classList.add('active');
+			startX = e.pageX - container.offsetLeft;
+			scrollLeft = container.scrollLeft;
+		});
+
+		container.addEventListener('mouseleave', () => {
+			isDown = false;
+			container.classList.remove('active');
+		});
+
+		container.addEventListener('mouseup', () => {
+			isDown = false;
+			container.classList.remove('active');
+		});
+
+		container.addEventListener('mousemove', (e) => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - container.offsetLeft;
+			const walk = (x - startX) * 3; // Scroll faster
+			container.scrollLeft = scrollLeft - walk;
+		});
+	});
+});
+

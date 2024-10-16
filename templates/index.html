@@ -133,6 +133,58 @@
                     </article>
                 </div>
 
+                <!--Calgary Housing Prediction-->
+                <div class="container">
+                    <!-- Overarching Section Title -->
+                    <header>
+                        <h2>Calgary Housing Price Prediction Model</h2>
+                        <p>Insights and predictions about Calgary's housing market, based on data analysis and machine learning models.</p>
+                    </header>
+                
+                    <div class="row">
+                        <!-- First Graph -->
+                        <div class="col-md-6">
+                            <article class="item">
+                                <div class="iframe-container">
+                                    <iframe src="{{ url_for('static', filename='data.html') }}" width="100%" height="500px"></iframe>
+                                </div>
+                                <header>
+                                    <h3>Data my model was trained on <br>(Click on graph then use arrow keys to scroll left and right of graph)</h3>
+                                    <p>Interestingly, the median income in 2005 was 43.1k (Adjusted for inflation), and the median house price was 206.5k, while in 2022 the median price for a house was 396k with a median income of 48k.</p>
+                                </header>
+                            </article>
+                        </div>
+                
+                        <!-- Second Graph -->
+                        <div class="col-md-6">
+                            <article class="item">
+                                <div class="iframe-container">
+                                    <iframe src="{{ url_for('static', filename='predicted.html') }}" width="100%" height="500px"></iframe>
+                                </div>
+                                <header>
+                                    <h3>Predictions from my model<br>(Click on graph then use arrow keys to scroll left and right of graph)</h3>
+                                    <p>Training the model on RandomForestRegressor, the model has an R-squared value of 0.999.</p>
+                                </header>
+                            </article>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-4">
+                        <!-- Predicted Graph on its own row -->
+                        <div class="col-12">
+                            <article class="item">
+                                <iframe src="{{ url_for('static', filename='feature_importance.html') }}" width="100%" height="350px"></iframe>
+                                <header>
+                                    <h3>Feature Importance Prediction</h3>
+                                    <p>The graph shows the most important features driving the median house price.</p>
+                                </header>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
                 
                 <!-- COVID-19 Spread Map Iframe -->
                 <div class="col-12">
